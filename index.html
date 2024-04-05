@@ -132,9 +132,7 @@
         <button onclick="calcu(9)">9</button>
         <button onclick="calcu(0)">0</button>
         <button onclick="calcu('.')">.</button>
-        <button onclick="display.value.toString().slice(0,-1)" id="del">
-          del
-        </button>
+        <button onclick="deleteLastCharacter()" id="del">del</button>
       </div>
     </div>
   </body>
@@ -154,6 +152,10 @@
 
     function equal() {
       display.value = eval(display.value);
+    }
+
+    function deleteLastCharacter() {
+      display.value = display.value.slice(0, -1);
     }
   </script>
 </html>
